@@ -136,7 +136,7 @@ def main():
     with col1:
         st.image("logo.png", width=100)  # Adjust the width as needed
     with col2:
-        st.title("Mallards AI Assistance")
+        st.title("Mallards AI Assistant")
     
     conn = get_snowflake_connection()
     if conn:
