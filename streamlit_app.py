@@ -134,8 +134,7 @@ def main():
     # Display the logo
     st.image("logo.png", use_column_width=True)  # Adjust the path if needed
 
-    st.title("💬 Mallards AI Assistant")
-    st.write("Welcome to Mallards AI Assistant! How can we help you today?")
+    st.title("💬 Mallards AI Assistance")
     st.write("Ask your questions about Mallards below:")
     
     conn = get_snowflake_connection()
