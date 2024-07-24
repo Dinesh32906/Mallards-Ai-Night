@@ -134,7 +134,7 @@ def main():
     # Display the logo with a smaller width
     st.image("logo.png", width=150)  # Adjust the width as needed
 
-    st.title("💬 Mallards AI Assistant")
+    st.title("Mallards AI Assistant")
     
     # Add welcome message
     st.markdown("### Welcome to the Mallards AI Assistant! Please ask me questions about the game, stadium, food available, or anything you might find on a Mallards F.A.Q. page!")
