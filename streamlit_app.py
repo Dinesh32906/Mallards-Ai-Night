@@ -1,7 +1,7 @@
 import streamlit as st
 from snowflake.connector import connect
 import pandas as pd
-from config import get_snowflake_connection
+from config import get_snowflake_connection  # Correct import statement
 
 # Default values
 num_chunks = 3
@@ -22,9 +22,9 @@ def get_similar_chunks(question, session):
     cmd = """
         WITH results AS (
             SELECT RELATIVE_PATH,
-                VECTOR_COSINE_SIMILARITY(docs_chunks_table.chunk_vec,
-                                        SNOWFLAKE.CORTEX.EMBED_TEXT_768('e5-base-v2', %s)) AS similarity,
-                chunk
+                   VECTOR_COSINE_SIMILARITY(docs_chunks_table.chunk_vec,
+                                            SNOWFLAKE.CORTEX.EMBED_TEXT_768('e5-base-v2', %s)) AS similarity,
+                   chunk
             FROM docs_chunks_table
             ORDER BY similarity DESC
             LIMIT %s)
@@ -131,12 +131,12 @@ def complete(myquestion, session):
 def main():
     init_session_state()
     
-    # Display the logo with the title in columns
-    col1, col2 = st.columns([1, 3])
-    with col1:
-        st.image("logo.png", width=100)  # Adjust the width as needed
-    with col2:
-        st.title("Mallards AI Assistant")
+    # Display the logo
+    st.image("logo.png", use_column_width=True)  # Adjust the path if needed
+
+    st.title("💬 Mallards AI Assistant")
+    st.write("Welcome to Mallards AI Assistant! How can we help you today?")
+    st.write("Ask your questions about Mallards below:")
     
     conn = get_snowflake_connection()
     if conn:
@@ -154,7 +154,7 @@ def main():
             with st.chat_message("assistant"):
                 message_placeholder = st.empty()
                 question = question.replace("'", "")
-                with st.spinner("Mallards AI thinking..."):
+                with st.spinner(f"{model_name} thinking..."):
                     response = complete(question, session)
                     res_text = response
                     res_text = res_text.replace("'", "")
