@@ -131,11 +131,13 @@ def complete(myquestion, session):
 def main():
     init_session_state()
     
-    # Display the logo
-    st.image("logo.png", use_column_width=True)  # Adjust the path if needed
+    # Display the logo with a smaller width
+    st.image("logo.png", width=150)  # Adjust the width as needed
 
     st.title("💬 Mallards AI Assistance")
-    st.write("Ask your questions about Mallards below:")
+    
+    # Add welcome message
+    st.markdown("### Welcome to the Mallards AI Assistant! Please ask me questions about the game, stadium, food available, or anything you might find on a Mallards F.A.Q. page!")
     
     conn = get_snowflake_connection()
     if conn:
@@ -153,7 +155,7 @@ def main():
             with st.chat_message("assistant"):
                 message_placeholder = st.empty()
                 question = question.replace("'", "")
-                with st.spinner(f"{model_name} thinking..."):
+                with st.spinner("Mallards AI thinking..."):
                     response = complete(question, session)
                     res_text = response
                     res_text = res_text.replace("'", "")
