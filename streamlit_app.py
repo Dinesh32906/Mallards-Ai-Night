@@ -136,8 +136,8 @@ def main():
 
     st.title("Mallards AI Assistant")
     
-    # Add welcome message
-    st.markdown("### Welcome to the Mallards AI Assistant! Please ask me questions about the game, stadium, food available, or anything you might find on a Mallards F.A.Q. page!")
+    # Add welcome message with smaller font size
+    st.markdown("<p style='font-size: 16px;'>Welcome to the Mallards AI Assistant! Please ask me questions about the game, stadium, food available, or anything you might find on a Mallards F.A.Q. page!</p>", unsafe_allow_html=True)
     
     conn = get_snowflake_connection()
     if conn:
