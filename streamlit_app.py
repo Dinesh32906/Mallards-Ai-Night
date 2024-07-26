@@ -154,7 +154,7 @@ def main():
     <style>
     #made-with-love {
     position: fixed;
-    bottom: 40px;
+    bottom: 50px;
     right: 10px;
     font-size: 15px;
     color: #333;
