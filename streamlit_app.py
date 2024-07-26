@@ -150,13 +150,14 @@ def main():
     init_session_state()
 
     # Adding custom HTML and CSS
+    # Adding custom HTML and CSS
     custom_html = """
     <style>
     #made-with-love {
     position: fixed;
-    bottom: 50px;
-    right: 10px;
-    font-size: 15px;
+    bottom: 20px;  /* Adjusted height */
+    left: 10px;    /* Shifted to the left */
+    font-size: 12px;
     color: #333;
     background-color: #f9f9f9;
     padding: 5px 10px;
@@ -166,7 +167,7 @@ def main():
     }
     </style>
     <div id="made-with-love">
-    Made with ❤️ by Pandata Group 🐼
+    Made with ❤️ by [Your Name]
     </div>
     """
 
