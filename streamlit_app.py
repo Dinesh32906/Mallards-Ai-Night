@@ -174,7 +174,7 @@ def main():
     st.markdown(custom_html, unsafe_allow_html=True)
     
     # Display the logo with a smaller width
-    # st.image("logo.png", width=150)  # Adjust the width as needed
+    st.image("logo.png", width=150)  # Adjust the width as needed
 
     st.title("💬 Mallards AI Assistant")
     st.markdown("<h3 style='font-size:14px;'>Welcome to the Mallards AI Assistant! Please ask me questions about the game, stadium, food available, or anything you might find on a Mallards F.A.Q. page!</h3>", unsafe_allow_html=True)
