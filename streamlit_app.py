@@ -167,7 +167,7 @@ def main():
     }
     </style>
     <div id="made-with-love">
-    Made with ❤️ by [Your Name]
+    Made with ❤️ by Pandata Group 🐼
     </div>
     """
 
