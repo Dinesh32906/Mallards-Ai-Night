@@ -149,6 +149,13 @@ def complete(myquestion, session):
 def main():
     init_session_state()
 
+    hide_github_icon = """
+    #GithubIcon {
+      visibility: hidden;
+    }
+    """
+    st.markdown(hide_github_icon, unsafe_allow_html=True)
+
     # Adding custom HTML and CSS
     # Adding custom HTML and CSS
     custom_html = """
