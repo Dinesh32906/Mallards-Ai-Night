@@ -1,7 +1,25 @@
 import streamlit as st
 import pandas as pd
 from snowflake.connector import connect
-from config import get_snowflake_connection
+# from config import get_snowflake_connection
+from snowflake.connector import connect
+
+
+def get_snowflake_connection():
+    try:
+        conn = connect(
+            user=st.secrets.db_credentials.SNOWFLAKE_USER,
+            password=st.secrets.db_credentials.SNOWFLAKE_PASSWORD,
+            account=st.secrets.db_credentials.SNOWFLAKE_ACCOUNT,
+            role=st.secrets.db_credentials.SNOWFLAKE_ROLE,
+            warehouse=st.secrets.db_credentials.SNOWFLAKE_WAREHOUSE,
+            database=st.secrets.db_credentials.SNOWFLAKE_DATABASE,
+            schema=st.secrets.db_credentials.SNOWFLAKE_SCHEMA
+        )
+        return conn
+    except Exception as e:
+        raise Exception(f"Error connecting to Snowflake: {e}")
+
 
 # Default values
 num_chunks = 3
