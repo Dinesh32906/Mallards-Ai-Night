@@ -128,18 +128,11 @@ def complete(myquestion, session):
     
     return rows[0][0]
 
-def load_menu_data():
-    conn = get_snowflake_connection()
-    query = "SELECT * FROM UPDATED_MENU"
-    df = pd.read_sql(query, conn)
-    conn.close()
-    return df
-
 def main():
     init_session_state()
     
     # Display the logo with a smaller width
-    st.image("logo.png", width=150)  # Adjust the width as needed
+    # st.image("logo.png", width=150)  # Adjust the width as needed
 
     st.title("💬 Mallards AI Assistant")
     st.markdown("<h3 style='font-size:14px;'>Welcome to the Mallards AI Assistant! Please ask me questions about the game, stadium, food available, or anything you might find on a Mallards F.A.Q. page!</h3>", unsafe_allow_html=True)
@@ -148,7 +141,7 @@ def main():
     if conn:
         session = conn
         init_messages()
-        menu_data = load_menu_data()
+        
 
         for message in st.session_state.messages:
             with st.chat_message(message["role"]):
