@@ -148,6 +148,30 @@ def complete(myquestion, session):
 
 def main():
     init_session_state()
+
+    # Adding custom HTML and CSS
+    custom_html = """
+    <style>
+    #made-with-love {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    font-size: 12px;
+    color: #333;
+    background-color: #f9f9f9;
+    padding: 5px 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    }
+    </style>
+    <div id="made-with-love">
+    Made with ❤️ by Pandata Group 🐼
+    </div>
+    """
+
+# Render the custom HTML
+    st.markdown(custom_html, unsafe_allow_html=True)
     
     # Display the logo with a smaller width
     # st.image("logo.png", width=150)  # Adjust the width as needed
