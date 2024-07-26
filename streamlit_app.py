@@ -24,7 +24,7 @@ def get_snowflake_connection():
 # Default values
 num_chunks = 3
 slide_window = 7
-model_name = 'llama3.1-70b'  # Fixed model
+model_name = 'mixtral-8x7b'  # Fixed model
 
 def init_session_state():
     if "messages" not in st.session_state:
