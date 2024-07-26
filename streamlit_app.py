@@ -136,9 +136,9 @@ def main():
 
     st.title("💬 Mallards AI Assistant")
     st.markdown("<h3 style='font-size:14px;'>Welcome to the Mallards AI Assistant! Please ask me questions about the game, stadium, food available, or anything you might find on a Mallards F.A.Q. page!</h3>", unsafe_allow_html=True)
-    st.write("hi")
+    
     conn = get_snowflake_connection()
-    st.write("bye")
+    
     if conn:
         session = conn
         init_messages()
