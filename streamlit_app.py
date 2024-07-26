@@ -143,7 +143,7 @@ def main():
         session = conn
         init_messages()
         
-
+        st.write(session.sql("select 1"))
         for message in st.session_state.messages:
             with st.chat_message(message["role"]):
                 st.markdown(message["content"])
