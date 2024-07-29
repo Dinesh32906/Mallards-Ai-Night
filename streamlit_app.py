@@ -181,7 +181,7 @@ def main():
     st.image("logo.png", width=150)  # Adjust the width as needed
 
     st.title("💬 Mallards AI Assistant")
-    st.markdown("<h3 style='font-size:14px;'>Welcome to the Mallards AI Assistant! Please ask me questions about the game, stadium, food available, or anything you might find on a Mallards F.A.Q. page!</h3>", unsafe_allow_html=True)
+    st.markdown("<h3 style='font-size:14px;'>Welcome to the Mallards AI Assistant! Please ask me questions about the game, stadium, food available, or anything you might find on a Mallards F.A.Q. page! Please remember I am an AI agent please reach out to concessions or Restaurant for most accurate answer on the menu.</h3>", unsafe_allow_html=True)
     
     conn = get_snowflake_connection()
     
