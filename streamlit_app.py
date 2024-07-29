@@ -117,6 +117,8 @@ def create_prompt(myquestion, session):
         When answering the question contained between <question> and </question> tags
         be concise and do not hallucinate. 
         If you don’t have the information just say so. 
+
+        If you get relevant information od product from any combo say so.
         
         # If you do not know the price, do not give the price.
         
