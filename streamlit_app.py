@@ -121,6 +121,8 @@ def create_prompt(myquestion, session):
         # If you don’t have the information just say so. 
 
         If you get relevant information of product from any combo say so.
+
+        Please format the response very clean and neat, we are printing the response you have generated on streamlit UI.
         
         # If you do not know the price, do not give the price.
         
