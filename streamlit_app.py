@@ -108,7 +108,7 @@ def create_prompt(myquestion, session):
     else:
         prompt_context = get_similar_chunks(myquestion, session)
         chat_history = ""
-    st.write(prompt_context)
+    
     prompt = f"""
         You are an expert chat assistant that extracts information from the CONTEXT provided
         between <context> and </context> tags.
