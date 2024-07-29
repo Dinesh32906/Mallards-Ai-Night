@@ -118,7 +118,7 @@ def create_prompt(myquestion, session):
         be concise and do not hallucinate. 
         If you don’t have the information just say so. 
         
-        If you do not know the price, do not give the price.
+        # If you do not know the price, do not give the price.
         
         Do not mention the CONTEXT used in your answer.
         Do not mention the CHAT HISTORY used in your answer.
