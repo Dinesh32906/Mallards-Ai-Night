@@ -103,15 +103,12 @@ def create_prompt(myquestion, session):
         if chat_history:
             question_summary = summarize_question_with_history(chat_history, myquestion, session)
             prompt_context = get_similar_chunks(question_summary, session)
-            st.write(prompt_context)
         else:
             prompt_context = get_similar_chunks(myquestion, session)
-            st.write(prompt_context)
     else:
         prompt_context = get_similar_chunks(myquestion, session)
-        st.write(prompt_context)
         chat_history = ""
-
+    st.write(prompt_context)
     prompt = f"""
         You are an expert chat assistant that extracts information from the CONTEXT provided
         between <context> and </context> tags.
@@ -143,7 +140,6 @@ def create_prompt(myquestion, session):
 
 def complete(myquestion, session):
     prompt = create_prompt(myquestion, session)
-    st.write(prompt)
     cmd = """
         SELECT snowflake.cortex.complete(%s, %s) AS response
     """
