@@ -75,7 +75,8 @@ def summarize_question_with_history(chat_history, question, session):
     prompt = f"""
         Based on the chat history below and the question, generate a query that extends the question
         with the chat history provided. The query should be in natural language. 
-        Answer with only the query. Do not add any explanation.
+        Answer with only the query. 
+        # Do not add any explanation.
         
         <chat_history>
         {chat_history}
@@ -115,10 +116,11 @@ def create_prompt(myquestion, session):
         You offer a chat experience considering the information included in the CHAT HISTORY
         provided between <chat_history> and </chat_history> tags.
         When answering the question contained between <question> and </question> tags
-        be concise and do not hallucinate. 
-        If you don’t have the information just say so. 
+        be concise 
+        # and do not hallucinate. 
+        # If you don’t have the information just say so. 
 
-        If you get relevant information od product from any combo say so.
+        If you get relevant information of product from any combo say so.
         
         # If you do not know the price, do not give the price.
         
