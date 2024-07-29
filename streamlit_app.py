@@ -62,7 +62,7 @@ def get_similar_chunks(question, session):
         similar_chunks += df_chunks.iloc[i]['chunk']
     similar_chunks = similar_chunks.replace("'", "")
     
-    return df_chunks.iloc[0]
+    return df_chunks.iloc[0]['chunk']
 
 def get_chat_history():
     chat_history = []
