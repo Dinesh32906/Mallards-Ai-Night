@@ -22,7 +22,7 @@ def get_snowflake_connection():
 
 
 # Default values
-num_chunks = 3
+num_chunks = 1
 slide_window = 7
 model_name = 'llama3.1-405b'  # Fixed model
 
